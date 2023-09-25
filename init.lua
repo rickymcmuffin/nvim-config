@@ -1,0 +1,2 @@
+require("griotti")
+print("hello")
