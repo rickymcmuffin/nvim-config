@@ -1,2 +1,2 @@
 require("griotti")
-print("hello")
+

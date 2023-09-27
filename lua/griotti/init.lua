@@ -1,2 +1,2 @@
 require("griotti.remap")
-print("hello from griotti")
+require("griotti.options")
