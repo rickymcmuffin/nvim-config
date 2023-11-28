@@ -14,12 +14,13 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
 	{
 		{
-			"folke/tokyonight.nvim",
+			"maxmx03/solarized.nvim",
 			lazy = false, -- make sure we load this during startup if it is your main colorscheme
 			priority = 1000, -- make sure to load this before all the other start plugins
 			config = function()
 				-- load the colorscheme here
-				vim.cmd([[colorscheme tokyonight]])
+                vim.o.background = 'dark'
+				vim.cmd([[colorscheme solarized]])
 			end,
 		},
 
