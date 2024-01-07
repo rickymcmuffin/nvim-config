@@ -58,7 +58,9 @@ require("lazy").setup(
 				-- add any options here
 			},
 			lazy = false,
-		}
+		},
+
+        {'nmac427/guess-indent.nvim'},
 
 
 	}
