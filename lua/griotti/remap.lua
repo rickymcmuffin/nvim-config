@@ -8,7 +8,7 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- creates new terminal
-vim.keymap.set("n", "<C-t>", ":split<cr>:term<cr>i")
+-- vim.keymap.set("n", "<C-t>", ":split<cr>:term<cr>i")
 
 -- exits terminal
 vim.keymap.set("t", "<C-t>", "<C-\\><C-n>:q<cr>")
@@ -27,5 +27,6 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 
+vim.keymap.set("n", "<Esc>", ":noh<cr>");
 
 

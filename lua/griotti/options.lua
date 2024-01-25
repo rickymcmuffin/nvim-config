@@ -1,6 +1,6 @@
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.shell= 'powershell.exe'
+-- vim.opt.shell= 'powershell.exe'
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -14,7 +14,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
