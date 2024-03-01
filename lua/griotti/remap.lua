@@ -2,10 +2,25 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- switch between windows
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<A-h>", "<C-w>h")
+vim.keymap.set("n", "<A-j>", "<C-w>j")
+vim.keymap.set("n", "<A-k>", "<C-w>k")
+vim.keymap.set("n", "<A-l>", "<C-w>l")
+
+-- move windows
+vim.keymap.set("n", "<A-H>", "<C-w>H")
+vim.keymap.set("n", "<A-J>", "<C-w>J")
+vim.keymap.set("n", "<A-K>", "<C-w>K")
+vim.keymap.set("n", "<A-L>", "<C-w>L")
+vim.keymap.set("n", "<A-i>", "<C-w>r")
+vim.keymap.set("n", "<A-o>", "<C-w>R")
+
+
+-- resize windows
+vim.keymap.set("n", "<A-->", "<C-w>-")
+vim.keymap.set("n", "<A-=>", "<C-w>+")
+vim.keymap.set("n", "<A-,>", "<C-w><")
+vim.keymap.set("n", "<A-.>", "<C-w>>")
 
 -- creates new terminal
 -- vim.keymap.set("n", "<C-t>", ":split<cr>:term<cr>i")
