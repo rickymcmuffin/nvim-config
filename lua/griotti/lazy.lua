@@ -13,17 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
 	{
-		-- {
-		-- 	"maxmx03/solarized.nvim",
-		-- 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		-- 	priority = 1000, -- make sure to load this before all the other start plugins
-		--
-		-- 	config = function()
-		-- 		-- load the colorscheme here
-  --               vim.o.background = 'dark'
-		-- 		vim.cmd([[colorscheme solarized]])
-		-- 	end,
-		-- },
         {
             "folke/tokyonight.nvim",
             lazy = false,
@@ -40,6 +29,8 @@ require("lazy").setup(
 			dependencies = { 'nvim-lua/plenary.nvim' }
 		},
 		{ 'nvim-treesitter/nvim-treesitter' },
+
+        { 'tikhomirov/vim-glsl'},
 
 		{
 			"nvim-neo-tree/neo-tree.nvim",
@@ -69,7 +60,6 @@ require("lazy").setup(
 			lazy = false,
 		},
 
-        {'nmac427/guess-indent.nvim'},
 
 
 	}
