@@ -46,6 +46,6 @@ vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("v", "<leader>p", "\"+p")
 vim.keymap.set("n", "<leader>P", "\"+P")
 
-vim.keymap.set("n", "<Esc>", ":noh<cr>");
+vim.keymap.set("n", "<Esc>", ":let @/ = \"\"<cr>");
 
 
