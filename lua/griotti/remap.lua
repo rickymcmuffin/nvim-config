@@ -26,7 +26,10 @@ vim.keymap.set("n", "<A-.>", "<C-w>>")
 -- vim.keymap.set("n", "<C-t>", ":split<cr>:term<cr>i")
 
 -- exits terminal
-vim.keymap.set("t", "<C-t>", "<C-\\><C-n>:q<cr>")
+-- vim.keymap.set("t", "<C-t>", "<C-\\><C-n>:q<cr>")
+
+-- escape terminal mode
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- moves highlighted text up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
