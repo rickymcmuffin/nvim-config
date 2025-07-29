@@ -34,16 +34,16 @@ local default_setup = function(server)
 end
 
 local lua_ls_conf = function()
-            require('lspconfig').lua_ls.setup({
-                capabilities = lsp_capabilities,
-                settings = {
-                    Lua = {
-                        diagnostics = {
-                            globals = { 'vim' }
-                        }
-                    }
+    require('lspconfig').lua_ls.setup({
+        capabilities = lsp_capabilities,
+        settings = {
+            Lua = {
+                diagnostics = {
+                    globals = { 'vim' }
                 }
-            })
+            }
+        }
+    })
 end
 
 require('mason').setup({})
@@ -51,18 +51,6 @@ require('mason-lspconfig').setup({
     ensure_installed = {},
     handlers = {
         default_setup,
-        -- lua_ls = function()
-        --     require('lspconfig').lua_ls.setup({
-        --         capabilities = lsp_capabilities,
-        --         settings = {
-        --             Lua = {
-        --                 diagnostics = {
-        --                     globals = { 'vim' }
-        --                 }
-        --             }
-        --         }
-        --     })
-        -- end,
         lua_ls = lua_ls_conf,
     },
 })
@@ -73,12 +61,14 @@ cmp.setup({
     sources = {
         { name = 'nvim_lsp' },
     },
+    preselect = 'item',
+    completion = {
+        completeopt = 'menu,menuone,noinsert'
+    },
     mapping = cmp.mapping.preset.insert({
-        -- Enter key confirms completion item
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
-
-        -- Ctrl + space triggers completion menu
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
+        ['<Tab>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
     }),
     snippet = {
         expand = function(args)
