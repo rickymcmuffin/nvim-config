@@ -13,12 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
 	{
-        {
-            "folke/tokyonight.nvim",
-            lazy = false,
-            priority = 1000,
-            opts = {},
-        },
 
         { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
 
@@ -28,19 +22,10 @@ require("lazy").setup(
 			tag = '0.1.3',
 			dependencies = { 'nvim-lua/plenary.nvim' }
 		},
-		{ 'nvim-treesitter/nvim-treesitter' },
+        {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"},
 
         { 'tikhomirov/vim-glsl'},
 
-		{
-			"nvim-neo-tree/neo-tree.nvim",
-			branch = "v3.x",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-				"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-				"MunifTanjim/nui.nvim",
-			},
-		},
 		--- Uncomment these if you want to manage LSP servers from neovim
 		{ 'williamboman/mason.nvim' },
 		{ 'williamboman/mason-lspconfig.nvim' },
